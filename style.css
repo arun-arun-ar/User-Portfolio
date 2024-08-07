@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-image: url('https://png.pngtree.com/background/20231101/original/pngtree-web-development-concept-3d-illustrated-programming-and-coding-picture-image_5828036.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.9;
+    z-index: -1;
+}
+
+.container {
+    padding: 2vw 5vw;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 15vw;
+    max-width: 110px;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 0.5vw;
+    margin: 1vw;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+    font-size: clamp(16px, 2.5vw, 24px);
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: rgb(24, 145, 133);
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    border-radius: 6px;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    transition: 1s;
+    color: rgb(24, 145, 133);
+}
+
+.intro {
+    margin-top: 10vh;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.intro h3 {
+    font-size: clamp(24px, 4vw, 40px);
+    font-weight: bolder;
+}
+
+.name {
+    color: rgb(235, 10, 55);
+    font-size: clamp(20px, 3vw, 36px);
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 2vw;
+    }
+    
+    nav {
+        flex-direction: column;
+    }
+    
+    nav ul {
+        margin-top: 2vh;
+    }
+    
+    .intro {
+        margin-top: 5vh;
+    }
+}
