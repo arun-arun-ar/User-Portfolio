@@ -4,19 +4,28 @@
     box-sizing: border-box;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 header {
     background-image: url('https://png.pngtree.com/background/20231101/original/pngtree-web-development-concept-3d-illustrated-programming-and-coding-picture-image_5828036.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    width: 100%;
     height: 100vh;
-    width: 100vw;
     opacity: 0.9;
-    z-index: -1;
+    position: relative;
+    overflow: hidden;
 }
 
 .container {
     padding: 2vw 5vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 nav {
@@ -65,7 +74,7 @@ nav ul li a::after {
 
 nav ul li a:hover::after {
     width: 100%;
-    transition: 1s;
+    transition: 1s ease-in-out;
     color: rgb(24, 145, 133);
 }
 
@@ -75,8 +84,13 @@ nav ul li a:hover::after {
     font-family: 'Courier New', Courier, monospace;
 }
 
+.intro p{
+    font-size: 24px;
+    font-weight: 500;
+}
+
 .intro h3 {
-    font-size: clamp(24px, 4vw, 40px);
+    font-size: 40px;
     font-weight: bolder;
 }
 
@@ -85,20 +99,85 @@ nav ul li a:hover::after {
     font-size: clamp(20px, 3vw, 36px);
 }
 
-@media screen and (max-width: 768px) {
-    .container {
-        padding: 2vw;
-    }
-    
-    nav {
-        flex-direction: column;
-    }
-    
-    nav ul {
-        margin-top: 2vh;
-    }
-    
-    .intro {
-        margin-top: 5vh;
-    }
+.separation {
+    height: 7px;
+    background-color: rgb(46, 44, 44);
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    width: 100%;  
+    z-index: 2; 
+}
+
+/* ----------------about section ---------------------- */
+.about {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    padding: 5px;
+    color: white;
+} 
+
+.box1{
+    flex-basis: 40%;
+}
+.box1 img {
+    width: 500px;
+    height: 500px;
+}
+
+.box2{
+    flex-basis: 55%;
+}
+
+.introduction{
+    margin-left: 60px;
+}
+
+.introduction p{
+    margin-right: 60px;
+}
+.box2 h1 {
+    font-size: 40px;
+}
+
+.box2 p {
+    font-size: 24px;
+    text-align: justify;
+}
+
+.skills{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-top: 50px;
+    cursor: pointer;
+}
+.skills-link {
+    position: relative;
+    cursor: pointer;
+}
+
+.skills-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: rgb(255, 6, 6);
+    transition: width 1s ease-in-out;
+}
+
+.skills-link:hover::after {
+    width: 100%;
+}
+
+.active-link::after {
+    width: 100%;
 }
