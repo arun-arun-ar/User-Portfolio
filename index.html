@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arun Acharya Portfolio</title>
     <link rel="stylesheet" href="style.css">
-
+    <script src="index.js"></script>
 </head>
 <header>
     <div class="container">
@@ -26,7 +26,8 @@
         </nav>
 
         <div class="intro">
-            <p>Software Developer<p>
+            <p>Software Developer
+            <p>
             <h3>Hi, I am <span class="name">Arun</span> <br> a Software Developer.</h3>
         </div>
     </div>
@@ -45,18 +46,56 @@
                 <p>I am a highly motivated, detail-oriented Computer Systems Engineering graduate with robust
                     problem-solving skills, a passion for test-driven software development, and a relentless drive to
                     learn and apply new technologies.</p>
-                
-                    <div class="skills">
-                        <p class="skills-link active-link">Skills</p>
-                        <p class="skills-link">Experience</p>
-                        <p class="skills-link">Education</p>
-                    </div>
+
+                <div class="skills">
+                    <p class="skills-link active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="skills-link" onclick="opentab('experience')">Experience</p>
+                    <p class="skills-link" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="content display-skills" id="skills">
+                    <ul>
+                        <li><span>HTML/CSS/JavaScript</span></li>
+                        <li><span>Python</span></li>
+                        <li><span>Django</span></li>
+                        <li><span>Node.js</span></li>
+                        <li><span>MySQL</span></li>
+                        <li><span>MongoDB</span></li>
+                    </ul>
+                </div>
+                <div class="content" id="experience">
+                    <ul>
+                        <li><span>Bsc. Hons Computer System Engeenering </span></li>
+                        <li><span>Python</span></li>
+                        <li><span>Django</span></li>
+                        <li><span>Node.js</span></li>
+                        <li><span>MySQL</span></li>
+                        <li><span>MongoDB</span></li>
+                    </ul>
+                </div>
+                <div class="content" id="education">
+                    <ul>
+                        <li><span>HTML/CSS/JavaScript</span></li>
+                        <li><span>Python</span></li>
+                        <li><span>Django</span></li>
+                        <li><span>Node.js</span></li>
+                        <li><span>MySQL</span></li>
+                        <li><span>MongoDB</span></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 </section>
-
-
+<div class="separation"></div>
+<!-- ----------------Services section ---------------------- -->
+<section id="services">
+<div class="container-services">
+    <h1>My Services</h1>
+</div>
+<div class="services-image">
+    <img src="/images/background.png" alt="">
+</div>
+</section>
 </body>
 
 </html>
