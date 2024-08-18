@@ -16,3 +16,4 @@
         // Display the corresponding content section
         document.getElementById(tabname).classList.add("display-skills");
     }
+
