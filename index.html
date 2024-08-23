@@ -9,7 +9,7 @@
     <script src="index.js"></script>
     <script src="https://kit.fontawesome.com/b4f56c9c73.js" crossorigin="anonymous"></script>
 </head>
-<header>
+<header id="header">
     <div class="container">
         <nav>
             <div class="logo-container">
@@ -17,11 +17,11 @@
                 <!-- <div class="header-text">Arun Acharya</div> -->
             </div>
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Services</a></li>
-                <li><a href="">Portfolio</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
 
             </ul>
         </nav>
@@ -90,7 +90,7 @@
 <div class="separation"></div>
 <!-- ----------------Services section ---------------------- -->
 
-<section id="Services">
+<section id="services">
     <div class="container-services">
         <h1>My Services</h1>
         <div class="services-list">
@@ -180,14 +180,13 @@
             </div>
             <div class="contact-right">
                 <h1>Leave a Messege</h1>
-                <form action="">
+                <form name="submit-to-google-sheet">
                     <input type="text" name="name" placeholder="Please enter your full name......." required>
                     <input type="email" name="email" placeholder="Please enter your email......." required>
-                    <textarea name="message" placeholder="Please enter your message here.........." rows="6"
-                        required></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
-
-                </form>
+                    <textarea name="message" placeholder="Please enter your message here.........." rows="6" required></textarea>
+                    <button type="submit">Submit</button>
+                  </form>
+                  
             </div>
         </div>
         <div class="copyright">
