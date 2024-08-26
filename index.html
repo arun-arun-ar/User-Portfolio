@@ -27,8 +27,7 @@
         </nav>
 
         <div class="intro">
-            <p>Software Developer
-            <p>
+            <p>Software Developer</p>
             <h3>Hi, I am <span class="name">Arun</span> <br> a Software Developer.</h3>
         </div>
     </div>
@@ -127,6 +126,7 @@
     <div class="container-portfolio">
         <h1>My Work</h1>
         <div class="my-projects">
+            <!-- First three projects (visible by default) -->
             <div class="projects">
                 <img src="/images/background.png">
                 <div class="layer">
@@ -154,13 +154,23 @@
                     <a href=""><i class="fa-solid fa-link"></i></a>
                 </div>
             </div>
-
+            
+            <!-- Additional projects (initially hidden) -->
+            <div class="projects hidden">
+                <img src="/images/background.png">
+                <div class="layer">
+                    <h2>Project Title 4</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex facere, dolore iure consequuntur aliquam at non esse vitae laboriosam hic.</p>
+                    <a href=""><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <!-- Add more hidden projects as needed -->
         </div>
+        <button id="showMoreBtn" class="toggle-btn">Show More</button>
+        <button id="showLessBtn" class="toggle-btn hidden">Show Less</button>
     </div>
 </section>
 <div class="separation"></div>
-
-
 <!-- -----------------Contact section----------------- -->
 <section id="contact">
     <div class="container">
@@ -174,7 +184,7 @@
                     <a href="https://www.linkedin.com/in/arun-acharya-a27427178/"><i class="fa-brands fa-linkedin"></i></a>
                     <a href="https://github.com/arun-arun-ar"><i class="fa-brands fa-github"></i></a>
                 </div>
-                <a href="" download class="btn">Download Resume</a>
+                <a href="/images/ArunAcharyaResume.pdf" download class="btn">Download Resume</a>
             </div>
             <div class="contact-right">
                 <h1>Leave a Messege</h1>

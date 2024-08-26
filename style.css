@@ -91,8 +91,8 @@ nav ul li a:hover::after {
 }
 
 .intro p {
-    font-size: 24px;
-    font-weight: 500;
+    font-size: 50px;
+    font-weight: bolder;
 }
 
 .intro h3 {
@@ -293,90 +293,107 @@ nav ul li a:hover::after {
     text-align: center;
     margin-bottom: 40px;
 }
+  .my-projects {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+  }
 
-.my-projects {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    height: 400px;
-}
+  .projects {
+      border: 2px solid white;
+      color: rgb(248, 244, 244);
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+  }
 
-.projects {
-    border: 2px solid white;
-    color: rgb(248, 244, 244);
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-    height: 100%;
-}
+  .projects img {
+      border-radius: 10px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 1.5s;
+  }
 
-.projects img {
-    border-radius: 10px;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 1.5s;
-}
+  .layer {
+      width: 100%;
+      height: 0;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+      border-radius: 10px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      transition: height 1s;
+      z-index: 2;
+  }
 
-.layer {
-    width: 100%;
-    height: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
-    border-radius: 10px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    transition: height 1s;
-    z-index: 2;
-}
+  .layer a {
+      margin-top: 20px;
+      color: #ff004f;
+      text-decoration: none;
+      font-size: 18px;
+      line-height: 60px;
+      background-color: #fff;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      text-align: center;
+  }
 
-.layer a {
-    margin-top: 20px;
-    color: #ff004f;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 60px;
-    background-color: #fff;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    text-align: center;
-}
+  .projects:hover img {
+      transform: scale(1.1);
+  }
 
-.projects:hover img {
-    transform: scale(1.1);
-}
+  .projects:hover .layer {
+      height: 100%;
+  }
 
-.projects:hover .layer {
-    height: 100%;
-}
+  .hidden {
+      display: none;
+  }
 
+  .show-more-btn {
+      grid-column: 1 / -1;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+  }
 
-/* contact sectinn */
-#contact {
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
-    margin: 50px 0;
-}
-
-#contact h1 {
-    font-size: 40px;
-    font-weight: bold;
-}
+  .show-more-btn:hover {
+      background-color: #555;
+  }
 
 
-.row {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
+  /* contact sectinn */
+  #contact {
+      color: white;
+      font-family: 'Courier New', Courier, monospace;
+      margin: 50px 0;
+  }
 
+  #contact h1 {
+      font-size: 40px;
+      font-weight: bold;
+  }
+
+
+  .row {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+  }
 .contact-left {
     flex-basis: 35%;
 }
@@ -569,3 +586,22 @@ img {
 }
 
 
+  .toggle-btn {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+  }
+
+  .toggle-btn:hover {
+      background-color: #555;
+  }
+
+  .hidden {
+      display: none;
+  }

@@ -41,3 +41,25 @@ document.addEventListener('DOMContentLoaded', function () {
         console.error('Form not found')
     }
 })
+
+document.addEventListener('DOMContentLoaded', function() {
+    const showMoreBtn = document.getElementById('showMoreBtn');
+    const showLessBtn = document.getElementById('showLessBtn');
+    const hiddenProjects = document.querySelectorAll('.projects.hidden');
+
+    showMoreBtn.addEventListener('click', function() {
+        hiddenProjects.forEach(project => {
+            project.classList.remove('hidden');
+        });
+        showMoreBtn.classList.add('hidden');
+        showLessBtn.classList.remove('hidden');
+    });
+
+    showLessBtn.addEventListener('click', function() {
+        hiddenProjects.forEach(project => {
+            project.classList.add('hidden');
+        });
+        showLessBtn.classList.add('hidden');
+        showMoreBtn.classList.remove('hidden');
+    });
+});
